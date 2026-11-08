@@ -7,10 +7,11 @@ export interface Listing {
   sqft: number;
   wifi_speed: number;
   max_person: number;
+  bathroom_type: string;
   attachments?: string[];
   price_per_day: number;
-  full_suppport_available: number;
-  gym_area_available: number;
-  mini_cafe_available: number;
-  cinema_available: number;
+  washing_machine_available: boolean;
+  kitchen_available: boolean;
+  parking_area: boolean;
+  clothesline_available: boolean;
 }

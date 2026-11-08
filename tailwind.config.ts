@@ -1,3 +1,4 @@
+
 import type { Config } from 'tailwindcss'
 
 const config = {
@@ -7,47 +8,46 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   prefix: '',
   theme: {
     container: {
-
       center: true,
       padding: '75px',
       screens: {
-        "xl": "1280px",
-        "2xl": "1280px",
+        xl: '1280px',
+        '2xl': '1280px',
       },
     },
     extend: {
       boxShadow: {
-        button: '0px 10px 20px 0px #FF935780',
-        indicator: '0px 10px 20px 0px #1A143C1A'
+        button: '0px 8px 18px 0px rgba(138, 155, 118, 0.22)',
+        indicator: '0px 8px 20px 0px rgba(38, 58, 50, 0.08)',
       },
       colors: {
-        border: '#EDECF2',
-        'gray-light': '#F5F6F8',
-        placeholder: '#7D7B91',
+        border: 'hsl(var(--border))',
+        'gray-light': '#F1F0E8',
+        placeholder: '#8A9188',
         separator: {
-          DEFAULT: '#C0D1D9',
-          foreground: '#696481'
+          DEFAULT: '#DCE2D5',
+          foreground: '#687568',
         },
         ring: 'hsl(var(--ring))',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
-        'gradient-black': '#050211',
+        'gradient-black': '#263A32',
         primary: {
-          DEFAULT: '#FF9357',
-          foreground: '#CADAE0',
+          DEFAULT: '#8A9B76',
+          foreground: '#FFFFFF',
         },
         secondary: {
-          DEFAULT: '#1A143C',
+          DEFAULT: '#263A32',
           foreground: 'hsl(var(--secondary-foreground))',
         },
-        subtitle: '#9693A5',
+        subtitle: '#7B857A',
         destructive: {
-          DEFAULT: '#FF1515',
-          foreground: 'hsl(var(--destructive-foreground))',
+          DEFAULT: '#DC4444',
+          foreground: '#FFFFFF',
         },
         muted: {
           DEFAULT: 'hsl(var(--muted))',

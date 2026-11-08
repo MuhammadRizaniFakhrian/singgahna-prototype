@@ -1,3 +1,99 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* =================================
+   SINGGAHNA - MODERN NATURAL MINIMALIST
+================================= */
+
+@layer base {
+  :root {
+    /* Background & Text */
+    --background: 45 38% 94%;
+    --foreground: 156 22% 19%;
+
+    /* Card */
+    --card: 0 0% 100%;
+    --card-foreground: 156 22% 19%;
+
+    /* Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 156 22% 19%;
+
+    /* Primary - Sage Green */
+    --primary: 88 16% 53%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Forest Green */
+    --secondary: 156 22% 19%;
+    --secondary-foreground: 45 38% 94%;
+
+    /* Muted */
+    --muted: 45 25% 91%;
+    --muted-foreground: 150 8% 42%;
+
+    /* Accent */
+    --accent: 88 24% 90%;
+    --accent-foreground: 156 22% 19%;
+
+    /* Border & Input */
+    --border: 42 18% 87%;
+    --input: 42 18% 87%;
+
+    /* Ring */
+    --ring: 88 16% 53%;
+
+    /* Destructive */
+    --destructive: 0 68% 56%;
+    --destructive-foreground: 0 0% 100%;
+
+    --radius: 0.75rem;
+  }
+
+  /* Dark mode support */
+  .dark {
+    --background: 156 22% 12%;
+    --foreground: 45 38% 94%;
+
+    --card: 156 18% 16%;
+    --card-foreground: 45 38% 94%;
+
+    --popover: 156 18% 16%;
+    --popover-foreground: 45 38% 94%;
+
+    --primary: 88 20% 62%;
+    --primary-foreground: 156 22% 12%;
+
+    --secondary: 156 15% 25%;
+    --secondary-foreground: 45 38% 94%;
+
+    --muted: 156 12% 23%;
+    --muted-foreground: 45 12% 75%;
+
+    --accent: 156 16% 26%;
+    --accent-foreground: 45 38% 94%;
+
+    --border: 156 12% 26%;
+    --input: 156 12% 26%;
+
+    --ring: 88 20% 62%;
+
+    --destructive: 0 68% 56%;
+    --destructive-foreground: 0 0% 100%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    margin: 0;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}

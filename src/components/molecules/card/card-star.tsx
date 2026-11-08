@@ -1,56 +1,35 @@
-import Image from 'next/image'
 
-function CardStar({ 
+function CardStar({
   rating,
-  variant
-} : { 
-  rating: number
-  variant: 'review' | 'detail'
+  variant,
+}: {
+  rating: number;
+  variant: "review" | "detail";
 }) {
+  const normalizedRating = Math.max(0, Math.min(5, rating));
+
   return (
-    <div className='flex items-center space-x-0.5'>
-      <Image
-        src={`/icons/${(variant === 'detail' && rating < 1) ? 'star-gray.svg' : 'star.svg'}`}
-        alt='star'
-        height={0}
-        width={0}
-        data-rating={variant === 'review' ? rating >= 1 : true}
-        className='h-5 w-5 data-[rating=false]:hidden'
-      />
-      <Image
-        src={`/icons/${(variant === 'detail' && rating < 2) ? 'star-gray.svg' : 'star.svg'}`}
-        alt='star'
-        height={0}
-        width={0}
-        data-rating={variant === 'review' ? rating >= 2 : true}
-        className='h-5 w-5 data-[rating=false]:hidden'
-      />
-      <Image
-        src={`/icons/${(variant === 'detail' && rating < 3) ? 'star-gray.svg' : 'star.svg'}`}
-        alt='star'
-        height={0}
-        width={0}
-        data-rating={variant === 'review' ? rating >= 3 : true}
-        className='h-5 w-5 data-[rating=false]:hidden'
-      />
-      <Image
-        src={`/icons/${(variant === 'detail' && rating < 4) ? 'star-gray.svg' : 'star.svg'}`}
-        alt='star'
-        height={0}
-        width={0}
-        data-rating={variant === 'review' ? rating >= 4 : true}
-        className='h-5 w-5 data-[rating=false]:hidden'
-      />
-      <Image
-        src={`/icons/${(variant === 'detail' && rating < 5) ? 'star-gray.svg' : 'star.svg'}`}
-        alt='star'
-        height={0}
-        width={0}
-        data-rating={variant === 'review' ? rating >= 5 : true}
-        className='h-5 w-5 data-[rating=false]:hidden'
-      />
+    <div
+      className="flex items-center gap-0.5"
+      aria-label={`Rating ${normalizedRating} dari 5`}
+    >
+      {Array.from({ length: 5 }, (_, index) => {
+        const isActive = normalizedRating >= index + 1;
+
+        return (
+          <svg
+            key={index}
+            viewBox="0 0 24 24"
+            fill={isActive ? "#8A9B76" : "#D9DED2"}
+            className={variant === "detail" ? "h-5 w-5" : "h-5 w-5"}
+            aria-hidden="true"
+          >
+            <path d="M12 2.5l2.95 5.98 6.6.96-4.78 4.66 1.13 6.58L12 17.57l-5.9 3.11 1.13-6.58-4.78-4.66 6.6-.96L12 2.5z" />
+          </svg>
+        );
+      })}
     </div>
-  )
+  );
 }
 
-export default CardStar
+export default CardStar;

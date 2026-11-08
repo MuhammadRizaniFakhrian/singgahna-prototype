@@ -7,80 +7,38 @@ function Review() {
     <section id="review-section" className="container mx-auto my-[100px]">
       <div className="flex justify-center text-center">
         <Title
-          title="Happy Customers"
-          subtitle="We’d love to come back again soon"
+          title="Penyewa Puas"
+          subtitle="Mereka nyaman dan betah tinggal di kos kami."
         />
       </div>
       <div className="mt-[30px] grid grid-cols-3 gap-[30px]">
-        <div className="space-y-[30px]">
-          <CardReview
-            rating={4}
-            review="I was not so sure if there was a beautiful bedroom, but it was really great experience."
-            avatar="/images/avatar-review.svg"
-            username="Evelin Bie"
-            jobdesk="Full-Time Traveler"
-          />
-          <CardReview
-            rating={4}
-            review="It’s just amazing, will be back."
-            avatar="/images/avatar-review.svg"
-            username="Evelin Bie"
-            jobdesk="Full-Time Traveler"
-          />
-          <CardReview
-            rating={4}
-            review="I was not so sure if there was a beautiful bedroom, but it was really great experience."
-            avatar="/images/avatar-review.svg"
-            username="Evelin Bie"
-            jobdesk="Full-Time Traveler"
-          />
-        </div>
-        <div className="space-y-[30px]">
-          <CardReview
-            rating={5}
-            review="Price was too low yet luxury."
-            avatar="/images/avatar-review.svg"
-            username="Evelin Bie"
-            jobdesk="Full-Time Traveler"
-          />
-          <CardReview
-            rating={4}
-            review="I was not so sure if there was a beautiful bedroom, but it was really great experience."
-            avatar="/images/avatar-review.svg"
-            username="Evelin Bie"
-            jobdesk="Full-Time Traveler"
-          />
-          <CardReview
-            rating={5}
-            review="During covid I was stayed here and I got a lot of full of supports that I need to keep my body healthy."
-            avatar="/images/avatar-review.svg"
-            username="Evelin Bie"
-            jobdesk="Full-Time Traveler"
-          />
-        </div>
-        <div className="space-y-[30px]">
-          <CardReview
-            rating={4}
-            review="I was not so sure if there was a beautiful bedroom, but it was really great experience."
-            avatar="/images/avatar-review.svg"
-            username="Evelin Bie"
-            jobdesk="Full-Time Traveler"
-          />
-          <CardReview
-            rating={4}
-            review="It’s just amazing, will be back."
-            avatar="/images/avatar-review.svg"
-            username="Evelin Bie"
-            jobdesk="Full-Time Traveler"
-          />
-          <CardReview
-            rating={4}
-            review="I was not so sure if there was a beautiful bedroom, but it was really great experience."
-            avatar="/images/avatar-review.svg"
-            username="Evelin Bie"
-            jobdesk="Full-Time Traveler"
-          />
-        </div>
+          <div className="space-y-[30px]">
+            <CardReview
+              rating={4}
+              review="Kosnya nyaman, bersih, dan dekat dengan kampus. Betah banget tinggal di sini!"
+              avatar="/images/avatar1.png"
+              username="Yono"
+              jobdesk="Mahasiswa"
+            />
+          </div>
+          <div className="space-y-[30px]">
+            <CardReview
+              rating={5}
+              review="Fasilitas lengkap dan internet cepat. Tempatnya aman dan tenang untuk belajar."
+              avatar="/images/avatar2.png"
+              username="Yanto"
+              jobdesk="Mahasiswa"
+            />
+          </div>
+          <div className="space-y-[30px]">
+            <CardReview
+              rating={4}
+              review="Pelayanan pemilik kos ramah, kamar cozy, dan harganya terjangkau. Sangat puas!"
+              avatar="/images/avatar3.png"
+              username="Yanti"
+              jobdesk="Mahasiswa"
+            />
+          </div>
       </div>
     </section>
   );
